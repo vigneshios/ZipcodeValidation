@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ValidatingZipCodes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfo-W8-82L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Validate Zipcode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyJ-oc-qCL">
+                                        <rect key="frame" x="70.5" y="25" width="234.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="2HH-Nb-PVq"/>
+                                    <constraint firstItem="nyJ-oc-qCL" firstAttribute="top" secondItem="dfo-W8-82L" secondAttribute="top" constant="25" id="AX9-GH-zly"/>
+                                    <constraint firstItem="nyJ-oc-qCL" firstAttribute="centerX" secondItem="dfo-W8-82L" secondAttribute="centerX" id="eLd-1Y-6sd"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-Ba-y6W">
+                                <rect key="frame" x="20" y="170" width="335" height="162"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7v-zD-o6Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zipcode is invalid,please check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-qB-vJv">
+                                        <rect key="frame" x="0.0" y="66" width="335" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLg-0s-uW9">
+                                        <rect key="frame" x="0.0" y="132" width="335" height="30"/>
+                                        <state key="normal" title="Validate"/>
+                                        <connections>
+                                            <action selector="validatingZipcode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9s-2Z-NTu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dfo-W8-82L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ni-3Z-BRq"/>
+                            <constraint firstItem="dfo-W8-82L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ETT-sq-ovT"/>
+                            <constraint firstItem="x8b-Ba-y6W" firstAttribute="top" secondItem="dfo-W8-82L" secondAttribute="bottom" constant="100" id="GYt-7F-iSU"/>
+                            <constraint firstItem="x8b-Ba-y6W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UqP-Oj-MeQ"/>
+                            <constraint firstItem="dfo-W8-82L" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W0l-eJ-zS3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x8b-Ba-y6W" secondAttribute="trailing" constant="20" id="avz-Wx-4zw"/>
+                            <constraint firstItem="x8b-Ba-y6W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hLT-78-Nya"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="validationLbl" destination="bb9-qB-vJv" id="gPU-y3-1Z7"/>
+                        <outlet property="zipcodeTxtFld" destination="I7v-zD-o6Y" id="0sW-TR-L7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>
